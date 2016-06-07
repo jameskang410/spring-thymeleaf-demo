@@ -15,7 +15,7 @@ apply plugin: 'eclipse'
 apply plugin: 'spring-boot' 
 
 jar {
-	baseName = 'demo'
+	baseName = 'spring-thymeleaf-demo'
 	version = '0.0.1-SNAPSHOT'
 }
 sourceCompatibility = 1.8
@@ -29,8 +29,12 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+	compile("org.springframework.boot:spring-boot-starter-actuator")
 
-	testCompile('org.springframework.boot:spring-boot-starter-test') 
+	compile 'com.sendgrid:sendgrid-java:2.2.1'
+
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+
 }
 
 

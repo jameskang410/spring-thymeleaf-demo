@@ -10,7 +10,7 @@ import java.util.Locale;
 import java.util.Map;
 
 /**
- * Created by jkang on 6/1/16.
+ * Template -> HTML
  */
 
 @Component
@@ -27,6 +27,12 @@ public class TemplateRenderer {
         this.springTemplateEngine = springTemplateEngine;
     }
 
+    /**
+     * create HTML with variables to input
+     * @param templateName
+     * @param vars - map of template variables and values to input
+     * @return
+     */
     public String createHTML(String templateName, Map<String, String> vars) {
 
         Context ctx = new Context(Locale.ENGLISH, vars);
@@ -34,6 +40,11 @@ public class TemplateRenderer {
         return springTemplateEngine.process(getPath(templateName), ctx);
     }
 
+    /**
+     * Create path to template HTML file
+     * @param templateName
+     * @return path (relative to resources/templates)
+     */
     private String getPath(String templateName) {
         StringBuffer buffer = new StringBuffer();
 

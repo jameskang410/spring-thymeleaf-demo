@@ -13,17 +13,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by jkang on 6/1/16.
+ * Controller to show e-mail templates
  */
 
 @Controller
 @RequestMapping("/emails")
-public class EmailController {
+public class TemplateController {
 
     private TemplateRenderer templateRenderer;
 
     @Autowired
-    public EmailController(TemplateRenderer templateRenderer) {
+    public TemplateController(TemplateRenderer templateRenderer) {
         this.templateRenderer = templateRenderer;
     }
 
