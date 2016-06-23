@@ -7,8 +7,6 @@ import java.util.Map;
 /**
  * Definition of email request (payload for POST request)
  */
-
-@Component
 public class EmailModel {
 
     private String toEmail;

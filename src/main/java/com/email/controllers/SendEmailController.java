@@ -19,19 +19,16 @@ import java.util.Map;
 /**
  * REST controller to send e-mails via sendgrid
  */
-
 @RestController
 public class SendEmailController {
 
     @Value("${sendgrid.API_KEY}")
     private String API_KEY;
 
-    private EmailModel emailModel;
     private TemplateRenderer templateRenderer;
 
     @Autowired
-    public SendEmailController(EmailModel emailModel, TemplateRenderer templateRenderer) {
-        this.emailModel = emailModel;
+    public SendEmailController(TemplateRenderer templateRenderer) {
         this.templateRenderer = templateRenderer;
     }
 

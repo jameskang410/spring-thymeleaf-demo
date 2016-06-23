@@ -15,7 +15,6 @@ import java.util.Map;
 /**
  * Controller to show e-mail templates
  */
-
 @Controller
 @RequestMapping("/emails")
 public class TemplateController {
